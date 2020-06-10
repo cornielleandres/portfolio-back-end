@@ -8,10 +8,14 @@ const user = process.env.NODEMAILER_USER;
 const pass = process.env.NODEMAILER_PASS;
 const adminUser = process.env.NODEMAILER_ADMIN_USER;
 
-const transporter = nodemailer.createTransport({
-	host,
-	port,
-	requireTLS: true,
+// const transporter = nodemailer.createTransport({
+// 	host,
+// 	port,
+// 	requireTLS: true,
+// 	auth: { user, pass },
+// });
+const transporter = nodemailer.createTransport('SMTP', {
+	service: 'hotmail',
 	auth: { user, pass },
 });
 
