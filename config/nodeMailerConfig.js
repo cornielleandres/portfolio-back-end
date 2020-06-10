@@ -14,7 +14,7 @@ const adminUser = process.env.NODEMAILER_ADMIN_USER;
 // 	requireTLS: true,
 // 	auth: { user, pass },
 // });
-const transporter = nodemailer.createTransport('SMTP', {
+const transporter = nodemailer.createTransport({
 	service: 'hotmail',
 	auth: { user, pass },
 });
